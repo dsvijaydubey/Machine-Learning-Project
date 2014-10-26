@@ -91,6 +91,41 @@ THe outcome of the testplda gave me the answer to the prediction value for the p
 [1] D A A A A C C D A C D A E A C B A D A B
 Levels: A B C D E
 
+# Confusion Matrix - Testing the out of sample error for the test set that I have created for cross validation
+
+confusionMatrix(testingCV$classe, plda)
+
+onfusion Matrix and Statistics
+
+          Reference
+Prediction    A    B    C    D    E
+         A 1224  124  151  170    5
+         B  234  543  230  113   19
+         C  260   84  594   88    0
+         D   81  156  197  507   23
+         E  112  198  115   81  576
+
+Overall Statistics
+                                          
+               Accuracy : 0.5852          
+                 95% CI : (0.5725, 0.5978)
+    No Information Rate : 0.3247          
+    P-Value [Acc > NIR] : < 2.2e-16       
+                                          
+                  Kappa : 0.473           
+ Mcnemar's Test P-Value : < 2.2e-16       
+
+Statistics by Class:
+
+                     Class: A Class: B Class: C Class: D Class: E
+Sensitivity            0.6405  0.49140   0.4615  0.52868  0.92456
+Specificity            0.8868  0.87531   0.9060  0.90723  0.90384
+Pos Pred Value         0.7312  0.47673   0.5789  0.52593  0.53235
+Neg Pred Value         0.8369  0.88158   0.8574  0.90815  0.99021
+Prevalence             0.3247  0.18777   0.2187  0.16296  0.10586
+Detection Rate         0.2080  0.09227   0.1009  0.08615  0.09788
+Detection Prevalence   0.2845  0.19354   0.1743  0.16381  0.18386
+Balanced Accuracy      0.7636  0.68336   0.6838  0.71795  0.91420
 
 
   
